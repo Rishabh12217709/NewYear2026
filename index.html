@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy New Year 2026 🎉😂</title>
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg,#89f7fe,#66a6ff);
+    text-align:center;
+    overflow-x:hidden;
+}
+.container{
+    background:white;
+    width:85%;
+    max-width:700px;
+    margin:40px auto;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+h1{color:#ff5722;}
+button{
+    padding:12px 22px;
+    background:#ff5722;
+    color:white;
+    border:none;
+    border-radius:25px;
+    font-size:16px;
+    cursor:pointer;
+    margin:8px;
+}
+button:hover{background:#e64a19;}
+.page{display:none;}
+.active{display:block;}
+.emoji{
+    font-size:28px;
+    position:absolute;
+    animation:fall 4s linear;
+}
+@keyframes fall{
+    0%{top:-10%}
+    100%{top:110%}
+}
+.gallery img{
+    width:120px;
+    height:120px;
+    border-radius:12px;
+    margin:8px;
+    transition:0.3s;
+}
+.gallery img:hover{
+    transform:scale(1.2) rotate(5deg);
+}
+.firework{
+    position:absolute;
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:yellow;
+    animation:explode 1s linear infinite;
+}
+@keyframes explode{
+    0%{transform:translate(0,0);}
+    50%{transform:translate(var(--x),var(--y)); opacity:1;}
+    100%{opacity:0;}
+}
+</style>
+</head>
+<body onload="startEmoji()">
+
+<!-- PAGE 1 : Welcome -->
+<div class="container page active" id="page1">
+<h1>🎆 Happy New Year 2026 🎆</h1>
+<p>Welcome to your funny New Year surprise! 😂</p>
+<button onclick="go(2)">Start Fun 😜</button>
+</div>
+
+<!-- PAGE 2 : Funny Rules -->
+<div class="container page" id="page2">
+<h1>😂 New Year Rules</h1>
+<p>
+✔️ Smile 24x7 😄<br>
+✔️ Diet kal se 🤭<br>
+✔️ Problems = Block 🚫<br>
+✔️ Dosti lifetime 😎
+</p>
+<button onclick="go(1)">⬅ Back</button>
+<button onclick="go(3)">Next ➡</button>
+</div>
+
+<!-- PAGE 3 : Image Gallery PAGE 1 -->
+<div class="container page" id="page3">
+<h1>📸 Fun Memories 1</h1>
+<div class="gallery">
+<img src="https://iili.io/fXZPRj4.jpg">
+<img src="https://iili.io/fXZLQcP.jpg">
+<img src="https://iili.io/fXZZ8hb.jpg">
+<img src="https://iili.io/fXZDBOF.jpg">
+</div>
+<button onclick="go(2)">⬅ Back</button>
+<button onclick="go(4)">Next ➡</button>
+</div>
+
+<!-- PAGE 4 : Image Gallery PAGE 2 -->
+<div class="container page" id="page4">
+<h1>📸 Fun Memories 2</h1>
+<div class="gallery">
+<img src="https://iili.io/fXZmAut.jpg">
+<img src="https://iili.io/fXZycYl.jpg">
+<img src="https://iili.io/fXtJw3G.jpg">
+<img src="https://iili.io/fXtHfJR.jpg">
+</div>
+<button onclick="go(3)">⬅ Back</button>
+<button onclick="go(5)">Next ➡</button>
+</div>
+
+<!-- PAGE 5 : Funny Facts -->
+<div class="container page" id="page5">
+<h1>🤣 Funny New Year Facts</h1>
+<ul style="text-align:left;">
+<li>New Year ka first resolution 80% log tod dete hai 😂</li>
+<li>January 1 ko gym me log 3x zyada hote hai 😆</li>
+<li>Sabse zyada laugh New Year pe hota hai 😜</li>
+<li>Confetti + emoji rain = ultimate masti 🎉</li>
+</ul>
+<button onclick="go(4)">⬅ Back</button>
+<button onclick="go(6)">Next ➡</button>
+</div>
+
+<!-- PAGE 6 : Joke Generator -->
+<div class="container page" id="page6">
+<h1>🤣 Joke Machine</h1>
+<p id="joke">Click Random Joke button more time😆</p>
+<button onclick="joke()">Random Joke 😂</button>
+<button onclick="go(7)">Next ➡</button>
+<button onclick="go(5)">⬅ Back</button>
+</div>
+
+<!-- PAGE 7 : Funny Shayari -->
+<div class="container page" id="page7">
+<h1>📝 Funny Shayari</h1>
+<p id="shayari">Click show shayari button again and again for funny Shayari 😜</p>
+<button onclick="shayari()">Show Shayari 😂</button>
+<button onclick="go(8)">Next ➡</button>
+<button onclick="go(6)">⬅ Back</button>
+</div>
+
+<!-- PAGE 8 : New Year Animation -->
+<div class="container page" id="page8">
+<h1>🎇 Happy New Year Animation 🎇</h1>
+<p>Fireworks + Emoji Rain 🌟</p>
+<button onclick="go(7)">⬅ Back</button>
+<button onclick="go(9)">Next ➡</button>
+<button onclick="go(1)">🏠 Home</button>
+</div>
+
+<!-- PAGE 9 : Instagram -->
+<div class="container page" id="page9">
+<h1>📸 Follow on Instagram</h1>
+<p>Her funny posts & New Year masti 😎</p>
+<p style="font-size:20px; font-weight:bold;">@pooja_insta_id</p>
+<button onclick="openInstagram()">Click for Follow on Instagram 📱</button>
+<br><br>
+<button onclick="go(8)">⬅ Back</button>
+<button onclick="go(1)">🏠 Home</button>
+</div>
+
+<script>
+function go(n){
+    document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+    document.getElementById('page'+n).classList.add('active');
+}
+
+function startEmoji(){
+    setInterval(()=>{
+        let e=document.createElement("div");
+        e.className="emoji";
+        e.innerHTML="😂🎉🥳";
+        e.style.left=Math.random()*100+"vw";
+        document.body.appendChild(e);
+        setTimeout(()=>e.remove(),4000);
+    },400);
+
+    setInterval(()=>{
+        if(document.getElementById('page8').classList.contains('active')){
+            for(let i=0;i<5;i++){
+                let f=document.createElement("div");
+                f.className="firework";
+                f.style.left=Math.random()*100+"vw";
+                f.style.top="50%";
+                f.style.setProperty("--x",(Math.random()*100-50)+"vw");
+                f.style.setProperty("--y",(Math.random()*100-50)+"vh");
+                document.body.appendChild(f);
+                setTimeout(()=>f.remove(),1000);
+            }
+        }
+    },500);
+}
+
+function joke(){
+    let j=[
+        "New Year resolution: kal se padhna 😂",
+        "Gym join kiya – photo lene 😆",
+        "Diet plan start… next year 🤭",
+        "Mobile update ho gaya, life ka wait hai 😜",
+        "Confetti ka explosion + chocolate = perfect combo 🎉"
+    ];
+    document.getElementById("joke").innerHTML=j[Math.floor(Math.random()*j.length)];
+}
+
+function shayari(){
+    let s=[
+        "Tamatar gira mandi me, Happy New Year thandi me  😂",
+        "Aloo sade-sade, Tamatar sade-sade, Tumko Happy New Year rajai me pade-pade 😆",
+        "Upar se gira bum , 2025 khatm 😜",
+        "Chuha nikla bil se ,Happy New Year dil se. 🎉"
+    ];
+    document.getElementById("shayari").innerHTML=s[Math.floor(Math.random()*s.length)];
+}
+
+function openInstagram(){
+    window.open("https://www.instagram.com/the_poojasharm709?igsh=cXk0c29zNTJwdHh0", "_blank");
+}
+</script>
+
+</body>
+</html>
